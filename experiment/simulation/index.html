@@ -5,8 +5,61 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-		<!-- Your code goes here-->
+	 <main class="vl">
+    <header class="head">
+      <div class="header1">COMPUTATIONAL PHYSICS • INTERACTIVE MODEL</div>
+      <h1>Fractal Dimension Computation</h1>
+      <p>Physical Growth Models — Diffusion-Limited Aggregation (DLA)</p>
+    </header>
 
+    <section class="panel controls">
+      <div class="field">
+        <label for="particleCount">Particles to add</label>
+        <input id="particleCount" type="number" min="100" max="5000" step="100" value="1000" />
+      </div>
+      <div class="field">
+        <label for="walkLimit">Walk limit</label>
+        <input id="walkLimit" type="number" min="100" max="3000" step="100" value="900" />
+      </div>
+      <div class="actionbtn">
+        <button id="startBtn">Start simulation</button>
+        <button id="pauseBtn" class="secondary">Pause</button>
+        <button id="resetBtn" class="outline">Reset</button>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="panel visualization">
+        <div class="section-heading">
+          <div><h2>DLA growth pattern</h2><p>Particles perform random walks and stick to the cluster.</p></div>
+          <span id="status" class="status">Ready</span>
+        </div>
+        <canvas id="dlaCanvas" width="600" height="600" aria-label="DLA simulation canvas"></canvas>
+        <div class="legend"><span class="dot seed"></span> Seed <span class="dot particle"></span> Aggregated particles</div>
+      </div>
+
+      <aside class="panel metrics">
+        <h2>Live metrics</h2>
+        <div class="metric"><span>Particles in cluster</span><strong id="clusterCount">1</strong></div>
+        <div class="metric"><span>Attempted walkers</span><strong id="walkerCount">0</strong></div>
+        <div class="metric"><span>Estimated fractal dimension</span><strong id="dimension">—</strong></div>
+        <p class="note">The dimension is estimated with a box-counting method. It becomes more meaningful as the cluster grows; small clusters can produce unstable estimates.</p>
+        <button id="dimensionBtn" class="secondary full">Recalculate dimension</button>
+      </aside>
+    </section>
+
+    <section class="panel explanation">
+      <h2>How it works</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Release</h3><p>A particle starts at a random point near the edge of the growth region.</p></article>
+        <article><span>02</span><h3>Random walk</h3><p>It moves one grid cell at a time in a randomly chosen direction.</p></article>
+        <article><span>03</span><h3>Stick</h3><p>If it touches the existing cluster, it joins the aggregate.</p></article>
+        <article><span>04</span><h3>Estimate</h3><p>Box counting estimates dimension from how occupied boxes scale with box size.</p></article>
+      </div>
+      <p class="formula">D ≈ slope of log N(ε) / log(1/ε)</p>
+    </section>
+    <footer>Educational simulation • DLA was introduced as a model for branched growth in physical systems.</footer>
+  </main>
 	<!-- Add JS at the bottom of HTML file --> 
         <script src="./js/main.js"></script>
 </body>
