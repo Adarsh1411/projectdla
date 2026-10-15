@@ -3,18 +3,18 @@
 
 <b>Discipline | <b>DLA
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Virtual Lab
+<b> Experiment|     <b> Fractal Dimension Computation of Physical Growth Models (Diffusion-Limited Aggregation)
 
 ### About the Experiment 
-
 Fill a brief description of this experiment here
+This experiment simulates Diffusion-Limited Aggregation (DLA) to study fractal growth patterns. Randomly moving particles stick together to form a branching structure, and the fractal dimension is estimated using the box-counting method.
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<b>Name of Developer | <b> ADARSH PATEL AS
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b> Rajkiya Engineering College Banda 
+<b> Email id|     <b>  adarshaptel197931@gmail.com
+<b> Department |  Information Technology
 
 ### Contributors List
 
