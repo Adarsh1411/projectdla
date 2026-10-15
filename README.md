@@ -4,7 +4,7 @@
 <b>Discipline | <b>DLA
 :--|:--|
 <b> Lab | <b> Virtual Lab
-<b> Experiment|     <b>Fractal Dimension Computation of Physical Growth Models (Diffusion-Limited Aggregation)
+<b> Experiment|     <b> Fractal Dimension Computation of Physical Growth Models (Diffusion-Limited Aggregation)
 
 ### About the Experiment 
 Fill a brief description of this experiment here
